@@ -48,29 +48,7 @@ def findPossibleWords():
     Finds possible words.
     """
     new_words = []
-    # loop through the wordle_words and if theres a letter in dissallowed_words, then remove it using a hashmap
     
-    for word in wordle_words:
-        for i in range(len(word)):
-            if word[i] in dissalowed_words:
-                word = word.replace(word[i], "")
-        new_words.append(word)
-
-    # loop through the new_words and if theres a letter in yellow_words in the same index, then remove it
-    for word in new_words:
-        for i in range(len(word)):
-            if word[i] in yellow_words:
-                word = word.replace(word[i], "")
-        new_words.append(word)
-    
-    # loop through the new_words and if theres isnt a letter in solved_words in the same index, then remove it
-    for word in new_words:
-        for i in range(len(word)):
-            if word[i] in solved_words:
-                word = word.replace(word[i], "")
-        new_words.append(word)
-
-    return new_words
 
 def main():
     """
